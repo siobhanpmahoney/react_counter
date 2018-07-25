@@ -43,9 +43,12 @@ class App extends Component {
   }
 
   highlightSplit = (split) => {
-    console.log("in highlightSplit, split: ", split)
+    let currentSplitList = this.state.timeSplits.splice(0)
+    let updatedList = currentSplitList.slice(0, currentSplitList.indexOf(split) + 1)
     this.setState({
-      highlightedSplitValue: split
+      seconds: split,
+      highlightedSplitValue: split,
+      timeSplits: updatedList
     }, console.log(this.state.highlightedSplitValue))
   }
 

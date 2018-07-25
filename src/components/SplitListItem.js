@@ -44,7 +44,6 @@ class SplitListItem extends React.Component {
   }
 
   render() {
-    console.log("in split item. this.props.highlightedSplitValue", this.props.highlightedSplitValue)
     return (
       <li onClick={() => this.props.highlightSplit(this.props.split)} className={this.toggleHighlightStyle()}>{this.props.split}</li>
     )
