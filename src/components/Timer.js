@@ -1,9 +1,14 @@
 import React from 'react'
 
 class Timer extends React.Component {
+
+  componentDidUpdate(prevProps) {
+    console.log(prevProps)
+  }
+  
   render() {
     return (
-      <div onClick={this.props.startTimer}>{this.props.seconds}</div>
+      <div onClick={this.props.onTimerClick}>{this.props.seconds}</div>
     )
   }
 }
